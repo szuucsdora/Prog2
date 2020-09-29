@@ -89,10 +89,29 @@ c0=BankAccount()
 print(c.minlimit)
 print(c0)
 
-for i in range (1,15):
-    if int(np.random.randint(0,2)) == 0:
-        c.withdrow(int(np.random.randint(1,101)))
-    else:
-        c.deposit(int(np.random.randint(1, 101)))
+# for i in range (1,15):
+#     if int(np.random.randint(0,2)) == 0:
+#         c.withdrow(int(np.random.randint(1,101)))
+#     else:
+#         c.deposit(int(np.random.randint(1, 101)))
 
-    print(c)
+#     print(c)
+    
+    
+class MyList(list):
+    def __init__(self,p1):
+        list.__init__(self,p1)
+
+    def clear(self):
+        tmp=self.copy()
+
+        for i in tmp:
+            if i<0:
+                self.remove(i)
+
+
+
+# l=MyList(np.random.randint(-20,20,20))
+# print(l)
+# l.clear()
+# print(l)
